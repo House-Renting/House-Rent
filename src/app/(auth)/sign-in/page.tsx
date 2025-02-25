@@ -159,7 +159,7 @@ export default function SignInForm() {
 
   const { toast } = useToast();
   
-  const onSubmit = async (data) => {
+  const onSubmit = async (data :z.infer<typeof signInSchema>) => {
     console.log("Form Data", data);
     
     const result = await signIn('credentials', {
