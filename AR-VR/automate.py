@@ -2,8 +2,7 @@ import subprocess
 import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-COLMAP_EXE = r"C:/Program Files/COLMAP/bin/colmap.exe"
+COLMAP_EXE = r"C:/Program Files/Colmap/bin/colmap.exe"
 
 IMAGE_PATH = os.path.join(BASE_DIR, "datasets", "eagle")
 OUTPUT_PATH = os.path.join(BASE_DIR, "models")
@@ -25,8 +24,9 @@ def run_colmap(command):
         print(f"Error message: {e}")
         exit(1)
 
-
 def generate_3d_model():
+    """Runs the COLMAP pipeline for 3D reconstruction."""
+
     run_colmap([
         COLMAP_EXE, "feature_extractor",
         "--database_path", DB_PATH,
@@ -49,17 +49,19 @@ def generate_3d_model():
     run_colmap([
         COLMAP_EXE, "image_undistorter",
         "--image_path", IMAGE_PATH,
-        "--input_path",  os.path.join(SPARSE_PATH, "0").replace("\\", "/"),
+        "--input_path", os.path.join(SPARSE_PATH, "0").replace("\\", "/"),
         "--output_path", UNDISTORTED_PATH
     ])
-    
+
     run_colmap([
         COLMAP_EXE, "patch_match_stereo",
         "--workspace_path", UNDISTORTED_PATH,
         "--workspace_format", "COLMAP",
-        "--output_path", FUSED_PATH
+        "--PatchMatchStereo.window_radius", "3",
+        "--PatchMatchStereo.num_iterations", "3",
+        "--PatchMatchStereo.gpu_index", "1"
     ])
-    
+
     run_colmap([
         COLMAP_EXE, "stereo_fusion",
         "--workspace_path", UNDISTORTED_PATH,
