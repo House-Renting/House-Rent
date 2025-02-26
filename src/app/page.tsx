@@ -435,9 +435,9 @@ export default function Home1() {
   // Image gallery for hero section
   const heroImages = [
     "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG9tZXN8ZW58MHx8MHx8fDA%3D", // Replace with actual image paths in production
+    "https://images.unsplash.com/photo-1600585152915-d208bec867a1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvbWVzfGVufDB8fDB8fHww",
     "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG9tZXN8ZW58MHx8MHx8fDA%3D",
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG9tZXN8ZW58MHx8MHx8fDA%3D",
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG9tZXN8ZW58MHx8MHx8fDA%3D"
+    "https://images.unsplash.com/photo-1600585152915-d208bec867a1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvbWVzfGVufDB8fDB8fHww"
   ];
 
   useEffect(() => {
@@ -815,7 +815,7 @@ export default function Home1() {
             className="relative overflow-hidden rounded-xl aspect-square shadow-lg"
           >
             <img
-              src="/api/placeholder/300/300"
+              src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvbWVzfGVufDB8fDB8fHww"
               alt="Apartments"
               className="w-full h-full object-cover"
             />
@@ -835,7 +835,7 @@ export default function Home1() {
             className="relative overflow-hidden rounded-xl aspect-square shadow-lg"
           >
             <img
-              src="/api/placeholder/300/300"
+              src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvbWVzfGVufDB8fDB8fHww"
               alt="Houses"
               className="w-full h-full object-cover"
             />
@@ -855,7 +855,7 @@ export default function Home1() {
             className="relative overflow-hidden rounded-xl aspect-square shadow-lg"
           >
             <img
-              src="/api/placeholder/300/300"
+              src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvbWVzfGVufDB8fDB8fHww"
               alt="Condos"
               className="w-full h-full object-cover"
             />
@@ -875,7 +875,7 @@ export default function Home1() {
             className="relative overflow-hidden rounded-xl aspect-square shadow-lg"
           >
             <img
-              src="/api/placeholder/300/300"
+              src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvbWVzfGVufDB8fDB8fHww"
               alt="Luxury"
               className="w-full h-full object-cover"
             />
