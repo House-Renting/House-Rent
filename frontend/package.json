@@ -12,6 +12,7 @@
     "@babylonjs/core": "^7.50.0",
     "@babylonjs/gui": "^7.50.0",
     "@babylonjs/loaders": "^7.50.0",
+    "mongoose": "^8.10.2",
     "next": "15.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
