@@ -1,31 +1,23 @@
+import { log } from "console";
 import mongoose from "mongoose";
+const connection={}
 
-const MONGODB_URI = process.env.MONGODB_URI;
-
-if (!MONGODB_URI) {
-    throw new Error('Invalid/Missing environment variable: "MONGODB_URI"');
-}
-
-let isConnected = false;
-
-const connectDB = async () => {
-    if (isConnected) {
-        console.log("existing database connection");
+async function connectDB(){
+    if(connection.isConnected){
+        console.log("Already connected to database");
         return;
     }
-
-    try {
-        const db = await mongoose.connect(MONGODB_URI, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true
-        });
-
-        isConnected = db.connections[0].readyState;
-        console.log("connected successfully");
-    } catch (error) {
-        console.error("connection error:", error);
-        process.exit(1);
+    try{
+        const db=await mongoose.connect(process.env.MONGODB_URI || '',{})
+        console.log(db);
+        console.log(db.connections[0]);
+        
+        connection.isConnected=db.connections[0].readyState
+        console.log("Database is connected successfully");
+    }catch(error){
+        console.log("Database connection failed",error);
+        process.exit(1)        
     }
-};
+}
 
 export default connectDB;
